@@ -1,11 +1,12 @@
 const dotenv = require("dotenv")
 var cors = require('cors')
+const app = express();
 app.use(cors({
     origin: 'https://thriving-rolypoly-cb9f6b.netlify.app',
     credentials: true
 }));
 const express = require("express")
-const app = express();
+
 
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
