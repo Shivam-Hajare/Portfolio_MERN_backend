@@ -92,8 +92,7 @@ router.post("/signin", async (req, res) => {
             //to token in cookie
             console.log(token);
             res.cookie("jwtoken",token,{
-                expires: new Date(Date.now()+25920000000),
-                httpOnly:true
+                expires: new Date(Date.now()+25920000000)
             });
 
             //password checking with db
