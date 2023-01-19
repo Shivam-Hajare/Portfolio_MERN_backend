@@ -1,11 +1,13 @@
 const dotenv = require("dotenv")
 var cors = require('cors')
+const express = require("express")
+const bodyParser = require("body-parser");
 const app = express();
 app.use(cors({
     origin: 'https://thriving-rolypoly-cb9f6b.netlify.app',
     credentials: true
 }));
-const express = require("express")
+
 
 
 const cookieParser = require("cookie-parser");
@@ -19,7 +21,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-const bodyParser = require("body-parser");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 dotenv.config({ path: "./config.env" })
